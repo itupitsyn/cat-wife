@@ -16,4 +16,4 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: 22
           script: |
-            cd C:\cat-wife & docker stop cat-wife & docker rm cat-wife & docker rmi cat-wife & git pull & docker build . -t cat-wife & docker run -d -e TOKEN=${{ secrets.TOKEN }} -e LLM_URL=${{ secrets.LLM_URL }}
+            cd C:\cat-wife & docker stop cat-wife & docker rm cat-wife & docker rmi cat-wife & git pull & docker build . -t cat-wife & docker run -d -e TOKEN=${{ secrets.TOKEN }} -e LLM_URL=${{ secrets.LLM_URL }} --name cat-wife --restart always cat-wife
