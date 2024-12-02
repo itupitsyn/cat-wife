@@ -96,7 +96,6 @@ async def process_message(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
         await process_personal_message(update)
     else:
         await process_nununu(update)
-    print(contexts)
 
 load_dotenv()
 app = ApplicationBuilder().token(os.environ['TOKEN']).build()
